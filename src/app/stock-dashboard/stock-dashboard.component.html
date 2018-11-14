@@ -7,7 +7,7 @@
             <h4 class="value">-$0.66(-0.79%)<span style="color:gray"> Today</span></h4>
             <h4 class="value">-$0.00(-0.00%)<span style="color:gray"> After Hours</span></h4>
         </div>
-        <mat-card>
+        <mat-card>  
             <div [style.height.px]="280" class="push-top-sm">
                 <ngx-charts-line-chart [scheme]="{ domain: [ 'red'] }" [results]="times" [gradient]="gradient" [autoScale]="false" [xAxis]="false" [yAxis]="true" [legend]="false">
                 </ngx-charts-line-chart>
@@ -111,7 +111,7 @@
                     <mat-card-title>Rcent News</mat-card-title>
                 </mat-card-header>-->
                 <div class="container">
-                    <h1>Top Movers</h1>
+                    <h1>Recent News</h1>
                 </div>
                 <mat-divider></mat-divider>
                 <mat-card class="top-news-card" *ngFor="let news of topNews">

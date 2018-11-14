@@ -1,4 +1,4 @@
-<td-layout [mode]="(media.registerQuery('gt-sm') | async) ? 'side' : 'push'" [sidenavWidth]="(media.registerQuery('gt-xs') | async) ? '240px' : '100%'" [class]="activeTheme">
+<td-layout [mode]="(media.registerQuery('gt-sm') | async) ? 'side' : 'push'" [sidenavWidth]="(media.registerQuery('gt-xs') | async) ? '240px' : '100%'" [class]="'theme-dark'">
     <td-layout-nav [toolbarTitle]="''" logo="" navigationRoute="/">
         <div td-toolbar-content layout="row" layout-align="start center" flex>
             <button mat-button (click)="sdb()"><mat-icon>brush</mat-icon></button>
@@ -39,17 +39,7 @@
                 <button mat-icon-button [mat-menu-trigger-for]="more">
                     <mat-icon>more_vert</mat-icon>
                 </button>
-                <mat-menu xPosition="before" #more="matMenu">
-                    <button mat-menu-item *ngIf="activeTheme === 'theme-dark'" (click)="theme('theme-light')">
-                        <mat-icon>brightness_high</mat-icon>
-                        <span>Light Mode</span>
-                    </button>
-                    <button mat-menu-item *ngIf="activeTheme != 'theme-dark'" (click)="theme('theme-dark')">
-                        <mat-icon>brightness_low</mat-icon>
-                        <span>Dark Mode</span>
-                    </button>
-                </mat-menu>
-            </div>
+                    </div>
             <span>
                 <mat-menu #notificationsMenu="matMenu">
                     <td-menu class="td-menu">
